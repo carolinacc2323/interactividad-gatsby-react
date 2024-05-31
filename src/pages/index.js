@@ -3,27 +3,24 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
-import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
-import LigthSwicth from "../components/ligthswicth/ligthswitch"
-import AlertButton from "../components/alertbutton/alertbutton"
-import Button from "../components/button/Button"
-import Contador from "../components/contador/contador"
-import LigthDark from "../components/ligthdark/ligthdark"
-import FormCapName from "../formcapname/formcapname"
-import LoginButton from "../components/loginbutton/loginbutton"
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 const IndexPage = () => {
-  function saludar(amigo){
-    alert (`Hola ${amigo}`)
-  }
-  function saludar2 (){
-    alert('Eres un ternurín')
-}
+//   function saludar(amigo){
+//     alert (`Hola ${amigo}`)
+//   }
+//   function saludar2 (){
+//     alert('Eres un ternurín')
+// }
   return(
   <>
   <Layout>
-    <div>
+    <h1 className="display-1 text-center">Aplicación bootstrap</h1>
+
+
+
+    {/* <div>
     <LoginButton></LoginButton>
     </div>
     
@@ -50,13 +47,13 @@ const IndexPage = () => {
     <LigthDark>
       <p>Hola Perris, soy el amor de tu vida</p>
     </LigthDark>
-    <FormCapName></FormCapName>
+    <FormCapName></FormCapName> */}
     
   </Layout>
   </>
   )
 }
 
-export const Head = () => <Seo title="Home" />
+// export const Head = () => <Seo title="Home" />
 
 export default IndexPage
