@@ -1,4 +1,4 @@
-.display-1{
+/* .display-1{
   color: coral;
   font-weight: bold;
   font-size: 90%;
@@ -7,4 +7,7 @@
   .display-1{
     color: cornflowerblue;
   }
+} */
+.btn-secondary{
+  background-color: red;
 }
