@@ -1,31 +1,24 @@
 import React from 'react';
-import SaveDb from '../components/saveDb';
-import CerrarSesion from '../components/CerrarSesion';
-import Perfil from '../components/Perfil';
+import CerrarSesion from '../components/cerrarsesion';
+import Layout from "../components/layout";
+import Perfil from '../components/perfil';
+import UploadUserImage from '../components/uploaduserimage';
 
-const userId = localStorage.getItem('tndm_id')
-const userEmail = localStorage.getItem('tndm_email')
-const token =  localStorage.getItem('tndm_token')
 const Profile = () => {
-const userId = localStorage.getItem('tndm_id')
-const userEmail = localStorage.getItem('tndm_email')
-const token =  localStorage.getItem('tndm_token')
+  const rutaimg = 'http://localhost/api-qr-tandem/images/users/'+ localStorage.getItem('tandem_img_user')
     return (
-        <div>
-            {/* <SaveDb 
-            data="qr contenido5" 
-            nref="nombre del qr"
-            desc="un qr contenido muy guay"
-            userId= {userId}
-            ></SaveDb> */}
-            <CerrarSesion/>
-            <Perfil
-            email={'tndm_email'}
-            id={'tndm_id'}
-            token={'tndm_token'}
-            />
-
-        </div>
+        <>
+        <Layout>
+        <CerrarSesion/>
+        <Perfil
+          email={ localStorage.getItem('tndm_email')}
+          id={localStorage.getItem('tndm_id')}
+          role ={localStorage.getItem('tndm_role')}
+        />
+        <UploadUserImage idUser={localStorage.getItem('tndm_id')}></UploadUserImage>
+        <p><img width={80} src={rutaimg}/>¡Hola <strong>{localStorage.getItem('tandem_nombre')}</strong>!</p>
+        </Layout>
+        </>
     );
 };
-export default Profile;
+export default Profile

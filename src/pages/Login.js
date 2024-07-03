@@ -19,7 +19,10 @@ const Login = () => {
                 setMessage('Login exitoso para el usuario con id:'+ respuesta.user.id);
                 localStorage.setItem('tndm_id', respuesta.user.id)
                 localStorage.setItem('tndm_email', respuesta.user.email)
-                localStorage.setItem('tndm_token', respuesta.token)
+                // localStorage.setItem('tndm_token', respuesta.token)
+                localStorage.setItem('tandem_img_user', respuesta.user.image_url)
+                localStorage.setItem('tndm_role', respuesta.user.role)
+                window.location.href='/Profile'
             } else
                 setMessage('Credenciales incorrectas');
             }
@@ -43,7 +46,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
             />
             <button onClick={handleLogin}>Login</button>
-            <p>{message}</p>
+            {/* <p>{message}</p> */}
         </div>
     );
 };

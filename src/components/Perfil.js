@@ -1,21 +1,69 @@
 import React from 'react'
-import CerrarSesion from './CerrarSesion'
+import { Link } from 'gatsby'
 
-const userId= localStorage.getItem('tndem_id');
-const userEmail= localStorage.getItem('tndm_email');
-const userToken = localStorage.getItem('tndm_token');
+const Perfil = ({id,email,role})=>{
 
-const Perfil = (id, email, token) => {
-
-  return (
-    <>
-    <h1>Perfil de Tsuki</h1>
-    <p>{userId}</p>
-    <p>{userEmail}</p>
-    <p>{userToken}</p>
-    <CerrarSesion/>
-    </>
-  )
+    if(role=='guest'){
+        return(
+            <>
+                <p>Eres:| {email} | {role}</p>
+                <ul>
+                    <li>Cambiar modo oscuro/claro</li>
+                    <li>Cambiar contraseña</li>
+                    <li>Contactar con soporte</li>
+                    <li>Cambiar su foto de perfil</li>
+                    <li>Cerrar sesión</li>
+                </ul>
+            </>
+        )
+    }
+    if(role=='employee'){
+        return(
+            <>
+                <p>Eres: {email} | {role}</p>
+                <ul>
+                    <li>Cambiar modo oscuro/claro</li>
+                    <li>Cambiar contraseña</li>
+                    <li>Contactar con soporte</li>
+                    <li>Cambiar su foto de perfil</li>
+                    <li>Crear código QR</li>
+                    <li>Mostrar historial de tu QR</li>
+                    <li>Administrar tus propios códigos QR</li>
+                    <li>Cerrar sesión</li>
+                </ul>
+            </>
+        )
+    }
+    if(role=='admin'){
+        return(
+            <>
+                <p>Eres: {email} | {role}</p>
+                <ul>
+                    <li>Ver lista de usuarios</li>
+                    <li>Ver lista de códigos Qr</li>
+                    <li>Cambiar modo oscuro/claro</li>
+                    <li>Cambiar contraseña</li>
+                    <li>Contactar con soporte</li>
+                    <li>Cambiar su foto de perfil</li>
+                    <li>Crear código QR</li>
+                    <li>Mostrar historial de tu QR</li>
+                    <li>Administrar tus propios códigos QR</li>
+                    <li>Cerrar sesión</li>
+                </ul>
+            </>
+        )
+    }
+    return (
+        <>
+        <div>
+            <h1>Perfil de Tsuky</h1>
+            <p>{id}</p>
+            <p>{email}</p>
+            {/* {role== 'admin' && <p>Eres un administrador</p>}
+            {role=='employee' && <p>Eres un empleado</p>}
+            {role=='guest' && <p>Eres un invitado</p>} */}
+        </div>
+        </>
+    )
 }
-
 export default Perfil
