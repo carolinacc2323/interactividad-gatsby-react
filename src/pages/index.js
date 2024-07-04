@@ -111,3 +111,25 @@ export default IndexPage
       <p>Hola Perris, soy el amor de tu vida</p>
     </LigthDark>
     <FormCapName></FormCapName> */
+
+
+    // const rol = localStorage.getItem('tndm_role')
+    // return(
+    //     <div>
+    //       {rol ? <h1>Welcome {rol}</h1> : <h1>Please sign up.</h1>}
+    //     </div>
+    // )
+  
+// const rol = localStorage.getItem('tndm_role')
+//   if(rol){
+//     return(
+//       <>
+//         <p>Tu rol es {rol}</p>
+//       </>
+//     )
+//   }
+//     return(
+//       <>
+//         <p>hola amigo, bienvenido</p>
+//       </>
+//     )

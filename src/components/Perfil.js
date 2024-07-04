@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import CerrarSesion from './cerrarsesion'
 
 const Perfil = ({id,email,role})=>{
 
@@ -12,7 +13,8 @@ const Perfil = ({id,email,role})=>{
                     <li>Cambiar contraseña</li>
                     <li>Contactar con soporte</li>
                     <li>Cambiar su foto de perfil</li>
-                    <li>Cerrar sesión</li>
+                    <li><CerrarSesion/></li>
+                    <li><Link to='/'>Crear QR</Link></li>
                 </ul>
             </>
         )
@@ -29,7 +31,8 @@ const Perfil = ({id,email,role})=>{
                     <li>Crear código QR</li>
                     <li>Mostrar historial de tu QR</li>
                     <li>Administrar tus propios códigos QR</li>
-                    <li>Cerrar sesión</li>
+                    <li><CerrarSesion/></li>
+                    <li><Link to='/'>Crear QR</Link></li>
                 </ul>
             </>
         )
@@ -48,7 +51,8 @@ const Perfil = ({id,email,role})=>{
                     <li>Crear código QR</li>
                     <li>Mostrar historial de tu QR</li>
                     <li>Administrar tus propios códigos QR</li>
-                    <li>Cerrar sesión</li>
+                    <li><CerrarSesion/></li>
+                    <li><Link to='/'>Crear QR</Link></li>
                 </ul>
             </>
         )

@@ -4,7 +4,6 @@ const [mensaje, setMensaje]=useState(false)
 const [respuesta, setRespuesta]=useState('')
 
     const saveQr= async () => {
-       
         try {
             const response = await fetch('http://localhost/api-qr-tandem/v1/create-qr.php', {
                 method: 'POST',
